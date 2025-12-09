@@ -42,8 +42,9 @@ function renderRooms(rooms) {
 
     card.innerHTML = `
       <h2>${room.team}</h2>
+      <p><strong>Time:</strong> ${room.time}</p>
       <p><strong>Location:</strong> ${room.location}</p>
-      <p><strong>Notes:</strong> ${room.notes}</p>
+      <p><strong>Product:</strong> ${room.product}</p>
     `;
 
     container.appendChild(card);

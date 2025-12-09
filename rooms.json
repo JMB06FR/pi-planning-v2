@@ -1,7 +1,214 @@
 [
-  { "team": "Avengers", "location": "Room 6A", "notes": "Working on RPM features" },
-  { "team": "Transformers", "location": "Room 7A", "notes": "Integrations & backend" },
-  { "team": "Marvels", "location": "Room 8A", "notes": "RPM enhancements" },
-  { "team": "DAP BI Team", "location": "Room 17B", "notes": "Analytics & dashboards" }
+  {
+    "time": "08:55-09:45",
+    "location": "Auditorium N.W.",
+    "product": "All",
+    "team": "All"
+  },
+  {
+    "time": "10:00-11:30",
+    "location": "1D",
+    "product": "PLM",
+    "team": "Plenary"
+  },
+  {
+    "time": "10:00-11:30",
+    "location": "0B",
+    "product": "R&D",
+    "team": "Plenary"
+  },
+  {
+    "time": "10:00-11:30",
+    "location": "Auditorium N.W.",
+    "product": "MON",
+    "team": "Plenary"
+  },
+  {
+    "time": "10:00-11:30",
+    "location": "4A",
+    "product": "TLM",
+    "team": "Plenary"
+  },
+  {
+    "time": "10:00-11:30",
+    "location": "5B",
+    "product": "EXP RW",
+    "team": "Plenary"
+  },
+  {
+    "time": "11:30-15:45",
+    "location": "1D",
+    "product": "ePI",
+    "team": "MSFT"
+  },
+  {
+    "time": "11:30-15:45",
+    "location": "9B",
+    "product": "EAF & Product UI & FHIR Adaptor",
+    "team": "MSFT"
+  },
+  {
+    "time": "11:30-15:45",
+    "location": "2B",
+    "product": "PMS",
+    "team": "BEV & Data Quality"
+  },
+  {
+    "time": "11:30-15:45",
+    "location": "8A",
+    "product": "RPM",
+    "team": "Team Marvels"
+  },
+  {
+    "time": "11:30-15:45",
+    "location": "7A",
+    "product": "RPM",
+    "team": "Team Transformers"
+  },
+  {
+    "time": "11:30-15:45",
+    "location": "6A",
+    "product": "RPM",
+    "team": "Team Avengers"
+  },
+  {
+    "time": "11:30-15:45",
+    "location": "17B",
+    "product": "DAP",
+    "team": "BI Team"
+  },
+  {
+    "time": "11:30-15:45",
+    "location": "3B",
+    "product": "UPD",
+    "team": "UPD Team"
+  },
+  {
+    "time": "11:30-15:45",
+    "location": "13B",
+    "product": "CRM",
+    "team": "Core Team"
+  },
+  {
+    "time": "11:30-15:45",
+    "location": "17A",
+    "product": "CRM",
+    "team": "System Team"
+  },
+  {
+    "time": "11:30-15:45",
+    "location": "1D",
+    "product": "EURSnext",
+    "team": "EURSNext Team"
+  },
+  {
+    "time": "11:30-15:45",
+    "location": "14A",
+    "product": "DAP",
+    "team": "DNA_KM"
+  },
+  {
+    "time": "11:30-15:45",
+    "location": "0B",
+    "product": "CTIS",
+    "team": "CTIS dev team"
+  },
+  {
+    "time": "11:30-15:45",
+    "location": "1E",
+    "product": "CTIS BI, ASU BI",
+    "team": "Data Wizards"
+  },
+  {
+    "time": "11:30-15:45",
+    "location": "0A",
+    "product": "EVH, EVV Trans.",
+    "team": "Team Evengers"
+  },
+  {
+    "time": "11:30-15:45",
+    "location": "0A",
+    "product": "EVH, EVV Trans.",
+    "team": "Team Product Defenders"
+  },
+  {
+    "time": "11:30-15:45",
+    "location": "0A",
+    "product": "EVVBI, EVDAS DWH",
+    "team": "Team Data Dynamos"
+  },
+  {
+    "time": "11:30-15:45",
+    "location": "Auditorium N.W.",
+    "product": "UPhV + Inspection + PD and ESMP",
+    "team": "Team Flu Fighters"
+  },
+  {
+    "time": "11:30-15:45",
+    "location": "1F",
+    "product": "ESMP",
+    "team": "Team Alpha"
+  },
+  {
+    "time": "11:30-15:45",
+    "location": "3A",
+    "product": "SSA",
+    "team": "SSA"
+  },
+  {
+    "time": "11:30-15:45",
+    "location": "1G",
+    "product": "EudraGMDP",
+    "team": "EudraGMDP"
+  },
+  {
+    "time": "11:30-15:45",
+    "location": "4A",
+    "product": "Information Security and decommissioning of non prod tenant",
+    "team": ""
+  },
+  {
+    "time": "11:30-15:45",
+    "location": "Industry Lounge",
+    "product": "EXP RW",
+    "team": ""
+  },
+  {
+    "time": "11:30-15:45",
+    "location": "5B",
+    "product": "DAP",
+    "team": "DNA_ACE"
+  },
+  {
+    "time": "16:00-18:00",
+    "location": "1D",
+    "product": "PLM",
+    "team": "Plenary"
+  },
+  {
+    "time": "16:00-18:00",
+    "location": "0B",
+    "product": "R&D",
+    "team": "Plenary"
+  },
+  {
+    "time": "16:00-18:00",
+    "location": "Auditorium N.W.",
+    "product": "MON",
+    "team": "Plenary"
+  },
+  {
+    "time": "16:00-18:00",
+    "location": "4A",
+    "product": "TLM",
+    "team": "Plenary"
+  },
+  {
+    "time": "16:00-18:00",
+    "location": "5B",
+    "product": "EXP RW",
+    "team": "Plenary"
+  }
 ]
+
 

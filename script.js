@@ -1,4 +1,5 @@
 let roomsData = [];
+let currentCards = [];
 
 async function loadRooms() {
   const container = document.getElementById("rooms-container");
@@ -25,8 +26,16 @@ async function loadRooms() {
 
 function renderRooms(rooms) {
   const container = document.getElementById("rooms-container");
-  container.innerHTML = "";
 
+  // Fade out old cards
+  currentCards.forEach(card => {
+    card.classList.add("fade-out");
+    setTimeout(() => card.remove(), 250);
+  });
+
+  currentCards = [];
+
+  // Create new cards
   rooms.forEach(room => {
     const card = document.createElement("div");
     card.className = "room-card";
@@ -38,10 +47,14 @@ function renderRooms(rooms) {
     `;
 
     container.appendChild(card);
+    currentCards.push(card);
   });
 
   if (rooms.length === 0) {
-    container.innerHTML = "<p>No rooms match your search.</p>";
+    const msg = document.createElement("p");
+    msg.textContent = "No rooms match your search.";
+    container.appendChild(msg);
+    currentCards.push(msg);
   }
 }
 
@@ -68,4 +81,3 @@ document.getElementById("searchInput").addEventListener("input", applyFilters);
 document.getElementById("teamFilter").addEventListener("change", applyFilters);
 
 loadRooms();
-

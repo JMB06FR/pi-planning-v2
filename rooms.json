@@ -1,7 +1,7 @@
 [
-  { "team": "Team Avengers", "location": "Room 6A", "notes": "Working on RPM features" },
-  { "team": "Team Transformers", "location": "Room 7A", "notes": "Integrations & backend" },
-  { "team": "Team Marvels", "location": "Room 8A", "notes": "RPM enhancements" },
+  { "team": "Avengers", "location": "Room 6A", "notes": "Working on RPM features" },
+  { "team": "Transformers", "location": "Room 7A", "notes": "Integrations & backend" },
+  { "team": "Marvels", "location": "Room 8A", "notes": "RPM enhancements" },
   { "team": "DAP BI Team", "location": "Room 17B", "notes": "Analytics & dashboards" }
 ]
 

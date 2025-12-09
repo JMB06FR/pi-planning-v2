@@ -51,37 +51,37 @@
     "time": "11:30-15:45",
     "location": "2B",
     "product": "PMS",
-    "team": "BEV & Data Quality"
+    "team": "PMS BEV & Data Quality"
   },
   {
     "time": "11:30-15:45",
     "location": "8A",
     "product": "RPM",
-    "team": "Team Marvels"
+    "team": "Marvels"
   },
   {
     "time": "11:30-15:45",
     "location": "7A",
     "product": "RPM",
-    "team": "Team Transformers"
+    "team": "Transformers"
   },
   {
     "time": "11:30-15:45",
     "location": "6A",
     "product": "RPM",
-    "team": "Team Avengers"
+    "team": "Avengers"
   },
   {
     "time": "11:30-15:45",
     "location": "17B",
     "product": "DAP",
-    "team": "BI Team"
+    "team": "BI"
   },
   {
     "time": "11:30-15:45",
     "location": "3B",
     "product": "UPD",
-    "team": "UPD Team"
+    "team": "UPD"
   },
   {
     "time": "11:30-15:45",
@@ -99,7 +99,7 @@
     "time": "11:30-15:45",
     "location": "1D",
     "product": "EURSnext",
-    "team": "EURSNext Team"
+    "team": "EURSNext"
   },
   {
     "time": "11:30-15:45",
@@ -123,31 +123,31 @@
     "time": "11:30-15:45",
     "location": "0A",
     "product": "EVH, EVV Trans.",
-    "team": "Team Evengers"
+    "team": "Evengers"
   },
   {
     "time": "11:30-15:45",
     "location": "0A",
     "product": "EVH, EVV Trans.",
-    "team": "Team Product Defenders"
+    "team": "Product Defenders"
   },
   {
     "time": "11:30-15:45",
     "location": "0A",
     "product": "EVVBI, EVDAS DWH",
-    "team": "Team Data Dynamos"
+    "team": "Data Dynamos"
   },
   {
     "time": "11:30-15:45",
     "location": "Auditorium N.W.",
     "product": "UPhV + Inspection + PD and ESMP",
-    "team": "Team Flu Fighters"
+    "team": "Flu Fighters"
   },
   {
     "time": "11:30-15:45",
     "location": "1F",
     "product": "ESMP",
-    "team": "Team Alpha"
+    "team": "Alpha"
   },
   {
     "time": "11:30-15:45",
@@ -182,32 +182,32 @@
   {
     "time": "16:00-18:00",
     "location": "1D",
-    "product": "PLM",
-    "team": "Plenary"
+    "product": "",
+    "team": "Plenary PLM"
   },
   {
     "time": "16:00-18:00",
     "location": "0B",
-    "product": "R&D",
-    "team": "Plenary"
+    "product": "",
+    "team": "Plenary R&D"
   },
   {
     "time": "16:00-18:00",
     "location": "Auditorium N.W.",
-    "product": "MON",
-    "team": "Plenary"
+    "product": "",
+    "team": "Plenary MON"
   },
   {
     "time": "16:00-18:00",
     "location": "4A",
-    "product": "TLM",
-    "team": "Plenary"
+    "product": "",
+    "team": "Plenary TLM"
   },
   {
     "time": "16:00-18:00",
     "location": "5B",
-    "product": "EXP RW",
-    "team": "Plenary"
+    "product": "",
+    "team": "Plenary Exp Runway"
   }
 ]
 

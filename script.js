@@ -66,10 +66,9 @@ function applyFilters() {
   const filtered = roomsData.filter(room => {
     const matchesText =
       room.team.toLowerCase().includes(searchText) ||
-      room.location.toLowerCase().includes(searchText) ;
-    /*||
-      room.notes.toLowerCase().includes(searchText);
-    */
+      room.location.toLowerCase().includes(searchText) ||
+      room.product.toLowerCase().includes(searchText);
+  
     const matchesTeam = teamValue === "" || room.team === teamValue;
 
     return matchesText && matchesTeam;

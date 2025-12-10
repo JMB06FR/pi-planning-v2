@@ -45,6 +45,8 @@ function renderRooms(rooms) {
       <p><strong>Time:</strong> ${room.time}</p>
       <p><strong>Location:</strong> ${room.location}</p>
       <p><strong>Product:</strong> ${room.product}</p>
+      <p><strong>Value Stream:</strong> ${room.vs}</p>
+      <p><strong>Type:</strong> ${room.type}</p>
     `;
 
     container.appendChild(card);

@@ -3,217 +3,290 @@
     "time": "09:00-09:30",
     "location": "1D",
     "product": "Planning Adjustement",
-    "team": "Plenary PLM"
+    "team": "Plenary PLM",
+    "vs": "PLM",
+    "type": "Plenary"
   },
   {
     "time": "09:00-09:30",
     "location": "0B",
     "product": "Planning Adjustement",
-    "team": "Plenary R&D"
+    "team": "Plenary R&D",
+    "vs": "R&D",
+    "type": "Plenary"
   },
   {
     "time": "09:00-09:30",
     "location": "2C",
     "product": "Planning Adjustement",
-    "team": "Plenary MON"
+    "team": "Plenary MON",
+    "vs": "MON",
+    "type": "Plenary"
   },
   {
     "time": "09:00-09:30",
     "location": "4A",
     "product": "Planning Adjustement",
-    "team": "Plenary TLM"
+    "team": "Plenary TLM",
+    "vs": "TLM",
+    "type": "Plenary"
   },
   {
     "time": "09:00-09:30",
     "location": "5B",
     "product": "Planning Adjustement",
-    "team": "Plenary Exp Runway"
+    "team": "Plenary Exp Runway",
+    "vs": "Experimentation Runway",
+    "type": "Plenary"
   },
   {
     "time": "09:30-11:45",
     "location": "1D",
     "product": "ePI",
-    "team": "MSFT"
+    "team": "MSFT",
+    "vs": "PLM",
+    "type": "Breakout"
   },
   {
     "time": "09:30-11:45",
     "location": "9B",
     "product": "EAF & Product UI & FHIR Adaptor",
-    "team": "MSFT"
+    "team": "MSFT",
+    "vs": "PLM",
+    "type": "Breakout"
   },
   {
     "time": "09:30-11:45",
     "location": "T0A",
     "product": "PMS",
-    "team": "PMS BEV & Data Quality"
+    "team": "PMS BEV & Data Quality",
+    "vs": "PLM",
+    "type": "Breakout"
   },
   {
     "time": "09:30-11:45",
     "location": "8A",
     "product": "RPM",
-    "team": "Marvels"
+    "team": "Marvels",
+    "vs": "PLM",
+    "type": "Breakout"
   },
   {
     "time": "09:30-11:45",
     "location": "12A",
     "product": "RPM",
-    "team": "Transformers"
+    "team": "Transformers",
+    "vs": "PLM",
+    "type": "Breakout"
   },
   {
     "time": "09:30-11:45",
     "location": "6A",
     "product": "RPM",
-    "team": "Avengers"
+    "team": "Avengers",
+    "vs": "PLM",
+    "type": "Breakout"
   },
   {
     "time": "09:30-11:45",
     "location": "17B",
     "product": "DAP",
-    "team": "BI Team"
+    "team": "BI Team",
+    "vs": "PLM",
+    "type": "Breakout"
   },
   {
     "time": "09:30-11:45",
     "location": "3B",
     "product": "UPD",
-    "team": "UPD Team"
+    "team": "UPD Team",
+    "vs": "PLM",
+    "type": "Breakout"
   },
   {
     "time": "09:30-11:45",
     "location": "13B",
     "product": "CRM",
     "team": "Core Team"
+    "vs": "PLM",
+    "type": "Breakout"
   },
   {
     "time": "09:30-11:45",
     "location": "0E",
     "product": "CRM",
-    "team": "System Team"
+    "team": "System Team",
+    "vs": "PLM",
+    "type": "Breakout"
   },
   {
     "time": "09:30-11:45",
     "location": "1D",
     "product": "EURSnext",
-    "team": "EURSNext"
+    "team": "EURSNext",
+    "vs": "PLM",
+    "type": "Breakout"
   },
   {
     "time": "09:30-11:45",
     "location": "0D",
     "product": "DAP",
-    "team": "DNA_KM"
+    "team": "DNA_KM",
+    "vs": "R&D",
+    "type": "Breakout"
   },
   {
     "time": "09:30-11:45",
     "location": "0B",
     "product": "CTIS",
-    "team": "CTIS dev team"
+    "team": "CTIS dev team",
+    "vs": "R&D",
+    "type": "Breakout"
   },
   {
     "time": "09:30-11:45",
     "location": "1E",
     "product": "CTIS BI, ASU BI",
-    "team": "Data Wizards"
+    "team": "Data Wizards",
+    "vs": "R&D",
+    "type": "Breakout"
   },
   {
     "time": "09:30-11:45",
     "location": "2C",
     "product": "EVH, EVV Trans.",
-    "team": "Evengers"
+    "team": "Evengers",
+    "vs": "MON",
+    "type": "Breakout"
   },
   {
     "time": "09:30-11:45",
     "location": "2C",
     "product": "EVH, EVV Trans.",
-    "team": "Product Defenders"
+    "team": "Product Defenders",
+    "vs": "MON",
+    "type": "Breakout"
   },
   {
     "time": "09:30-11:45",
     "location": "2C",
     "product": "EVVBI, EVDAS DWH",
-    "team": "Data Dynamos"
+    "team": "Data Dynamos",
+    "vs": "MON",
+    "type": "Breakout"
   },
   {
     "time": "09:30-11:45",
     "location": "Auditorium N.W.",
     "product": "UPhV + Inspection + PD and ESMP",
-    "team": "Flu Fighters"
+    "team": "Flu Fighters",
+    "vs": "MON",
+    "type": "Breakout"
   },
   {
     "time": "09:30-11:45",
     "location": "1F",
     "product": "ESMP",
-    "team": "Alpha"
+    "team": "Alpha",
+    "vs": "MON",
+    "type": "Breakout"
   },
   {
     "time": "09:30-11:45",
     "location": "3A",
     "product": "SSA",
-    "team": "SSA"
+    "team": "SSA",
+    "vs": "MON",
+    "type": "Breakout"
   },
   {
     "time": "09:30-11:45",
     "location": "1G",
     "product": "EudraGMDP",
-    "team": "EudraGMDP"
+    "team": "EudraGMDP",
+    "vs": "MON",
+    "type": "Breakout"
   },
   {
     "time": "09:30-12:00",
     "location": "4A",
     "product": "Information Security and decommissioning of non prod tenant",
-    "team": "InfoSec"
+    "team": "InfoSec",
+    "vs": "TLM",
+    "type": "Breakout"
   },
   {
     "time": "09:30-12:00",
     "location": "0C",
     "product": "EXP RW",
-    "team": "TDT-DCX"
+    "team": "TDT-DCX",
+    "vs": "Exp RW",
+    "type": "Breakout"
   },
   {
     "time": "09:30-12:00",
     "location": "5B",
     "product": "DAP",
-    "team": "DNA_ACE"
+    "team": "DNA_ACE",
+    "vs": "Exp RW",
+    "type": "Breakout"
   },
   {
     "time": "11:45-12:00",
     "location": "1D",
-    "product": "CRM Core",
-    "team": "CRM Core Team"
+    "product": "Q1 Final Plan",
+    "team": "CRM Core Team",
+    "vs": "ALL",
+    "type": "Presentation"
   },
   {
     "time": "12:00-16:00",
     "location": "1D",
     "product": "Final Plan Review & ROAM",
-    "team": "Plenary PLM"
+    "team": "Plenary PLM",
+    "vs": "PLM",
+    "type": "Plenary"
   },
   {
     "time": "12:00-16:00",
     "location": "0B",
     "product": "Final Plan Review & ROAM",
-    "team": "Plenary R&D"
+    "team": "Plenary R&D",
+    "vs": "R&D",
+    "type": "Plenary"
   },
   {
     "time": "12:00-16:00",
     "location": "2C",
     "product": "Final Plan Review & ROAM",
-    "team": "Plenary MON"
+    "team": "Plenary MON",
+    "vs": "MON",
+    "type": "Plenary"
+
   },
   {
     "time": "12:00-16:00",
     "location": "4A",
     "product": "Final Plan Review & ROAM",
-    "team": "Plenary TLM"
+    "team": "Plenary TLM",
+    "vs": "TLM",
+    "type": "Plenary"
   },
   {
     "time": "12:00-16:00",
     "location": "5B",
     "product": "Final Plan Review & ROAM",
     "team": "Plenary Exp Runway"
+    "vs": "Exp RW",
+    "type": "Plenary"
   },
   {
     "time": "16:15-17:30",
     "location": "Auditorium N.W.",
     "product": "PI 26Q1 Overall Plenary Closing",
-    "team": "Every One"
+    "team": "Every One",
+    "vs": "Portfolio",
+    "type": "Plenary"
   } 
 ]
 

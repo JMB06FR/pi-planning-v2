@@ -107,7 +107,7 @@
     "time": "09:30-11:45",
     "location": "13B",
     "product": "CRM",
-    "team": "Core Team"
+    "team": "Core Team",
     "vs": "PLM",
     "type": "Breakout"
   },
@@ -276,7 +276,7 @@
     "time": "12:00-16:00",
     "location": "5B",
     "product": "Final Plan Review & ROAM",
-    "team": "Plenary Exp Runway"
+    "team": "Plenary Exp Runway",
     "vs": "Exp RW",
     "type": "Plenary"
   },

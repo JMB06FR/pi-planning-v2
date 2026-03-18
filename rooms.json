@@ -90,7 +90,7 @@
     {
     "time": "11:30-16:00",
     "location": "1B",
-    "product": "RPM",
+    "product": "IRIS RPM",
     "team": "Marvels",
     "vs": "PLM",
     "type": "Breakout"
@@ -98,7 +98,7 @@
   {
     "time": "11:30-16:00",
     "location": "1E",
-    "product": "RPM",
+    "product": "IRIS RPM",
     "team": "Transformers",
     "vs": "PLM",
     "type": "Breakout"
@@ -106,7 +106,7 @@
   {
     "time": "11:30-16:00",
     "location": "1F",
-    "product": "RPM",
+    "product": "IRIS RPM",
     "team": "Avengers",
     "vs": "PLM",
     "type": "Breakout"
@@ -193,7 +193,7 @@
   },
   {
     "time": "11:30-16:00",
-    "location": "3B",
+    "location": "13A",
     "product": "UPhV + Inspection + PD + ESMP",
     "team": "Flu Fighters",
     "vs": "MON",
@@ -213,6 +213,14 @@
     "product": "EudraGMDP",
     "team": "EudraGMDP",
     "vs": "MON",
+    "type": "Breakout"
+  },
+  {
+    "time": "11:30-16:00",
+    "location": "3B",
+    "product": "Anonymisation",
+    "team": "",
+    "vs": "MTA",
     "type": "Breakout"
   },
   {

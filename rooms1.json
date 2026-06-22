@@ -9,7 +9,7 @@
   },
   {
     "time": "10:00-11:10",
-    "location": "2C",
+    "location": "Auditorium",
     "product": "PI Objectives",
     "team": "Plenary PLM",
     "vs": "PLM",
@@ -17,7 +17,7 @@
   },
   {
     "time": "10:00-11:10",
-    "location": "0A",
+    "location": "2C",
     "product": "PI Objectives",
     "team": "Plenary R&D",
     "vs": "R&D",
@@ -25,7 +25,7 @@
   },
   {
     "time": "10:00-11:10",
-    "location": "1A",
+    "location": "1C",
     "product": "PI Objectives",
     "team": "Plenary MON",
     "vs": "MON",
@@ -41,7 +41,7 @@
   },
   {
     "time": "10:00-11:10",
-    "location": "5B",
+    "location": "7B",
     "product": "PI Objectives",
     "team": "Plenary Exp RW",
     "vs": "Exp RW",
@@ -49,7 +49,7 @@
   },
   {
     "time": "10:00-11:10",
-    "location": "13B",
+    "location": "1B",
     "product": "PI Objectives",
     "team": "Plenary MTA",
     "vs": "MTA",
@@ -65,7 +65,7 @@
   },
   {
     "time": "11:30-16:00",
-    "location": "2B",
+    "location": "2E",
     "product": "EAF & Product UI & FHIR",
     "team": "MSFT",
     "vs": "PLM",
@@ -73,7 +73,7 @@
   },
   {
     "time": "11:30-16:00",
-    "location": "2C",
+    "location": "2B",
     "product": "PMS",
     "team": "PMS BEV",
     "vs": "PLM",
@@ -89,7 +89,7 @@
   },
     {
     "time": "11:30-16:00",
-    "location": "1B",
+    "location": "1G",
     "product": "IRIS RPM",
     "team": "Marvels",
     "vs": "PLM",
@@ -113,9 +113,9 @@
   },
   {
     "time": "11:30-16:00",
-    "location": "9B",
-    "product": "IRIS BI",
-    "team": "DAP BI Team",
+    "location": "5B",
+    "product": "IRIS, CMDS, ESMP",
+    "team": "DNA BI Team",
     "vs": "PLM",
     "type": "Breakout"
   },
@@ -129,7 +129,7 @@
   },
   {
     "time": "11:30-16:00",
-    "location": "2E",
+    "location": "Auditorium",
     "product": "IRIS",
     "team": "IRIS Core Team",
     "vs": "PLM",
@@ -137,7 +137,7 @@
   },
   {
     "time": "11:30-16:00",
-    "location": "8A",
+    "location": "Auditorium",
     "product": "IRIS",
     "team": "IRIS System Team",
     "vs": "PLM",
@@ -145,7 +145,7 @@
   },
   {
     "time": "11:30-16:00",
-    "location": "14A",
+    "location": "10A",
     "product": "DAP Knowledge Mining",
     "team": "DNA_KM",
     "vs": "R&D",
@@ -153,7 +153,7 @@
   },
   {
     "time": "11:30-16:00",
-    "location": "0A",
+    "location": "2C",
     "product": "CTIS",
     "team": "CTIS dev team",
     "vs": "R&D",
@@ -161,7 +161,7 @@
   },
   {
     "time": "11:30-16:00",
-    "location": "11B",
+    "location": "11A",
     "product": "CTIS BI, ASU BI",
     "team": "Data Wizards",
     "vs": "R&D",
@@ -169,7 +169,7 @@
   },
   {
     "time": "11:30-16:00",
-    "location": "1A",
+    "location": "1C",
     "product": "EVH, EVV Trans.",
     "team": "Evengers",
     "vs": "MON",
@@ -177,7 +177,7 @@
   },
   {
     "time": "11:30-16:00",
-    "location": "1A",
+    "location": "1C",
     "product": "EVH, EVV Trans.",
     "team": "Product Defenders",
     "vs": "MON",
@@ -185,7 +185,7 @@
   },
   {
     "time": "11:30-16:00",
-    "location": "1A",
+    "location": "1C",
     "product": "EVVBI, EVDAS DWH",
     "team": "Data Dynamos",
     "vs": "MON",
@@ -194,14 +194,14 @@
   {
     "time": "11:30-16:00",
     "location": "13A",
-    "product": "UPhV + Inspection + PD + ESMP",
+    "product": "UPhV + Inspection + PD + ENS",
     "team": "Flu Fighters",
     "vs": "MON",
     "type": "Breakout"
   },
   {
     "time": "11:30-16:00",
-    "location": "10A",
+    "location": "3B",
     "product": "ESMP",
     "team": "Alpha",
     "vs": "MON",
@@ -209,18 +209,18 @@
   },
   {
     "time": "11:30-16:00",
-    "location": "1G",
-    "product": "EudraGMDP",
-    "team": "EudraGMDP",
+    "location": "6A",
+    "product": "SSA",
+    "team": "SSA",
     "vs": "MON",
     "type": "Breakout"
   },
   {
     "time": "11:30-16:00",
-    "location": "3B",
-    "product": "Anonymisation",
-    "team": "MTA",
-    "vs": "MTA",
+    "location": "13B",
+    "product": "EudraGMDP",
+    "team": "EudraGMDP",
+    "vs": "MON",
     "type": "Breakout"
   },
   {
@@ -233,23 +233,31 @@
   },
   {
     "time": "11:30-16:00",
-    "location": "5A",
-    "product": "Exp RW",
-    "team": "TDT-DCX",
+    "location": "7A",
+    "product": "Experimentation",
+    "team": "ALL",
     "vs": "Exp RW",
     "type": "Breakout"
   },
   {
     "time": "11:30-16:00",
-    "location": "5B",
+    "location": "7B",
     "product": "DAP",
     "team": "DNA_ACE",
     "vs": "Exp RW",
     "type": "Breakout"
   },
+ {
+    "time": "11:30-16:00",
+    "location": "1B",
+    "product": "SAP HR",
+    "team": "SAP",
+    "vs": "MTA",
+    "type": "Breakout"
+  },
   {
     "time": "16:00-18:00",
-    "location": "2C",
+    "location": "Auditorium",
     "product": "Draft Plan Review/Problem Solving",
     "team": "Plenary PLM",
     "vs": "PLM",
@@ -257,7 +265,7 @@
   },
   {
     "time": "16:00-18:00",
-    "location": "0A",
+    "location": "2C",
     "product": "Draft Plan Review/Problem Solving",
     "team": "Plenary R&D",
     "vs": "R&D",
@@ -265,7 +273,7 @@
   },
   {
     "time": "16:00-18:00",
-    "location": "1A",
+    "location": "1C",
     "product": "Draft Plan Review/Problem Solving",
     "team": "Plenary MON",
     "vs": "MON",
@@ -281,7 +289,7 @@
   },
   {
     "time": "16:00-18:00",
-    "location": "5B",
+    "location": "7B",
     "product": "Draft Plan Review/Problem Solving",
     "team": "Plenary Exp RW",
     "vs": "Exp RW",
@@ -289,7 +297,7 @@
   },
   {
     "time": "16:00-18:00",
-    "location": "13B",
+    "location": "1B",
     "product": "Draft Plan Review/Problem Solving",
     "team": "Plenary MTA",
     "vs": "MTA",

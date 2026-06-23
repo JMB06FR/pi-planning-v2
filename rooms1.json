@@ -59,15 +59,15 @@
     "time": "11:30-16:00",
     "location": "15A",
     "product": "ePI",
-    "team": "MSFT",
+    "team": "ePI",
     "vs": "PLM",
     "type": "Breakout"
   },
   {
     "time": "11:30-16:00",
     "location": "2E",
-    "product": "EAF & Product UI & FHIR",
-    "team": "MSFT",
+    "product": "eAF & Product UI & FHIR",
+    "team": "eAF PUI FHIR",
     "vs": "PLM",
     "type": "Breakout"
   },
@@ -114,8 +114,8 @@
   {
     "time": "11:30-16:00",
     "location": "5B",
-    "product": "IRIS, CMDS, ESMP",
-    "team": "DNA BI Team",
+    "product": "IRIS, CMDS, ESMP, PMS",
+    "team": "DAP BI",
     "vs": "PLM",
     "type": "Breakout"
   },

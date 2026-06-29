@@ -1,6 +1,6 @@
 [
   {
-    "time": "09:00-09:50",
+    "time": "09:00-09:45",
     "location": "Auditorium",
     "product": "PI Plenary",
     "team": "ALL",
@@ -8,7 +8,7 @@
     "type": "Plenary"
   },
   {
-    "time": "10:00-11:10",
+    "time": "10:00-11:30",
     "location": "Auditorium",
     "product": "PI Objectives",
     "team": "Plenary PLM",
@@ -16,7 +16,7 @@
     "type": "Plenary"
   },
   {
-    "time": "10:00-11:10",
+    "time": "10:00-11:30",
     "location": "2C",
     "product": "PI Objectives",
     "team": "Plenary R&D",
@@ -24,7 +24,7 @@
     "type": "Plenary"
   },
   {
-    "time": "10:00-11:10",
+    "time": "10:00-11:30",
     "location": "1C",
     "product": "PI Objectives",
     "team": "Plenary MON",
@@ -32,7 +32,7 @@
     "type": "Plenary"
   },
   {
-    "time": "10:00-11:10",
+    "time": "10:00-11:30",
     "location": "3A",
     "product": "PI Objectives",
     "team": "Plenary TLM",
@@ -40,15 +40,15 @@
     "type": "Plenary"
   },
   {
-    "time": "10:00-11:10",
-    "location": "7B",
+    "time": "10:00-11:30",
+    "location": "13B",
     "product": "PI Objectives",
     "team": "Plenary Exp RW",
     "vs": "Exp RW",
     "type": "Plenary"
   },
   {
-    "time": "10:00-11:10",
+    "time": "10:00-11:30",
     "location": "1B",
     "product": "PI Objectives",
     "team": "Plenary MTA",
@@ -129,7 +129,7 @@
   },
   {
     "time": "11:30-16:00",
-    "location": "Auditorium",
+    "location": "3A",
     "product": "IRIS",
     "team": "IRIS Core Team",
     "vs": "PLM",
@@ -137,7 +137,7 @@
   },
   {
     "time": "11:30-16:00",
-    "location": "Auditorium",
+    "location": "0D",
     "product": "IRIS",
     "team": "IRIS System Team",
     "vs": "PLM",
@@ -193,7 +193,7 @@
   },
   {
     "time": "11:30-16:00",
-    "location": "13A",
+    "location": "7A",
     "product": "UPhV + Inspection + PD + ENS",
     "team": "Flu Fighters",
     "vs": "MON",
@@ -217,7 +217,7 @@
   },
   {
     "time": "11:30-16:00",
-    "location": "13B",
+    "location": "7B",
     "product": "EudraGMDP",
     "team": "EudraGMDP",
     "vs": "MON",
@@ -225,15 +225,7 @@
   },
   {
     "time": "11:30-16:00",
-    "location": "3A",
-    "product": "Information Security",
-    "team": "InfoSec",
-    "vs": "TLM",
-    "type": "Breakout"
-  },
-  {
-    "time": "11:30-16:00",
-    "location": "7A",
+    "location": "13A",
     "product": "Experimentation",
     "team": "ALL",
     "vs": "Exp RW",
@@ -241,7 +233,7 @@
   },
   {
     "time": "11:30-16:00",
-    "location": "7B",
+    "location": "13B",
     "product": "DAP",
     "team": "DNA_ACE",
     "vs": "Exp RW",
@@ -289,7 +281,7 @@
   },
   {
     "time": "16:00-18:00",
-    "location": "7B",
+    "location": "13B",
     "product": "Draft Plan Review/Problem Solving",
     "team": "Plenary Exp RW",
     "vs": "Exp RW",

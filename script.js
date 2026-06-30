@@ -6,7 +6,7 @@ async function loadRooms() {
   const teamFilter = document.getElementById("teamFilter");
 
   try {
-    const response = await fetch("rooms1.json");
+    const response = await fetch("rooms.json");
     roomsData = await response.json();
 
     // Populate team dropdown

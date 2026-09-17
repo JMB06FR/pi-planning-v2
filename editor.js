@@ -1,5 +1,6 @@
 'use strict';
-const fields = ['time', 'location', 'product', 'team', 'vs', 'type'];
+const fields = ['day', 'time', 'vs', 'location', 'product', 'purpose', 'type', 'team'];
+const legacyFields = ['time', 'location', 'product', 'team', 'vs', 'type'];
 const draftKey = 'pi-planning-v2-agenda-draft-v1';
 let rows = [];
 let ready = false;
@@ -11,9 +12,11 @@ function normalize(data) {
     if (!row || typeof row !== 'object' || Array.isArray(row)) throw new Error(`Row ${i + 1} is not a session.`);
     const result = {};
     for (const field of fields) {
+      if (['day', 'purpose', 'team'].includes(field) && row[field] === undefined) { result[field] = ''; continue; }
       if (typeof row[field] !== 'string') throw new Error(`Row ${i + 1}: missing or invalid ${field}.`);
       result[field] = row[field];
     }
+    if (Number.isInteger(row.sourceRow) && row.sourceRow > 0) result.sourceRow = row.sourceRow;
     return result;
   });
 }
@@ -21,22 +24,32 @@ function save() {
   try { localStorage.setItem(draftKey, JSON.stringify(rows)); status(`${rows.length} sessions. Draft saved in this browser; not published.`); }
   catch { status('Draft could not be saved in this browser. Download it before leaving this page.'); }
 }
+function showIssues() {
+  const messages = AgendaExcel.issues(rows.filter(r => r.day || r.sourceRow));
+  $('issues').replaceChildren();
+  for (const message of messages) { const li = document.createElement('li'); li.textContent = message; $('issues').append(li); }
+  $('review').hidden = !messages.length;
+}
 function render() {
+  showIssues();
   $('rows').replaceChildren();
   rows.forEach((row, i) => {
     const tr = document.createElement('tr');
     fields.forEach(field => {
       const td = document.createElement('td');
-      const input = document.createElement('input');
-      input.value = row[field]; input.required = true;
+      const input = document.createElement(['product', 'purpose', 'team'].includes(field) ? 'textarea' : 'input');
+      input.value = row[field]; input.required = ['time', 'vs', 'product', 'type'].includes(field);
+      if (input.tagName === 'TEXTAREA') input.rows = 2;
       input.setAttribute('aria-label', `Session ${i + 1}: ${field}`);
-      input.addEventListener('input', () => { row[field] = input.value; save(); });
-      td.append(input); tr.append(td);
+      input.addEventListener('input', () => { row[field] = input.value; save(); showIssues(); });
+      td.append(input);
+      if (field === 'day' && row.sourceRow) { const note = document.createElement('small'); note.textContent = 'Excel row ' + row.sourceRow; td.append(note); }
+      tr.append(td);
     });
     const actions = document.createElement('td');
     for (const [label, action] of [
       ['Duplicate', () => rows.splice(i + 1, 0, {...row})],
-      ['Delete', () => { if (confirm(`Delete session ${i + 1} (${row.team || 'new session'})?`)) rows.splice(i, 1); }]
+      ['Delete', () => { if (confirm(`Delete session ${i + 1} (${row.team || row.product || 'new session'})?`)) rows.splice(i, 1); }]
     ]) {
       const button = document.createElement('button'); button.textContent = label;
       button.setAttribute('aria-label', `${label} session ${i + 1}`);
@@ -49,10 +62,17 @@ function render() {
 }
 function validate() {
   if (!rows.length) throw new Error('Add at least one session before exporting.');
+  const hasDays = rows.some(row => row.day);
   rows.forEach((row, i) => {
-    fields.forEach(field => { if (!row[field].trim()) throw new Error(`Session ${i + 1}: fill in ${field}.`); });
-    const match = row.time.trim().match(/^([01]\d|2[0-3]):([0-5]\d)\s*[-–]\s*([01]\d|2[0-3]):([0-5]\d)$/);
-    if (!match || (+match[1] * 60 + +match[2]) >= (+match[3] * 60 + +match[4])) throw new Error(`Session ${i + 1}: use a valid time range, e.g. 09:00-12:00, with the end after the start.`);
+    const required = ['time', 'vs', 'product', 'type'];
+    if (row.type !== 'Break') required.push('location');
+    if (hasDays || row.sourceRow) required.push('day', 'purpose');
+    required.forEach(field => { if (!row[field].trim()) throw new Error(`Session ${i + 1}${row.sourceRow ? ' (Excel row ' + row.sourceRow + ')' : ''}: fill in ${field}.`); });
+    if (row.day && !/^Day [12]$/.test(row.day)) throw new Error(`Session ${i + 1}: choose Day 1 or Day 2.`);
+    const time = AgendaExcel.normalizeTime(row.time);
+    if (/^from ([01]\d|2[0-3]):[0-5]\d$/i.test(time)) return;
+    const match = time.match(/^([01]\d|2[0-3]):([0-5]\d)-([01]\d|2[0-3]):([0-5]\d)$/);
+    if (!match || (+match[1] * 60 + +match[2]) >= (+match[3] * 60 + +match[4])) throw new Error(`Session ${i + 1}: use a valid time range, e.g. 09:00-12:00, with the end after the start, or “from 18:00”.`);
   });
 }
 function parseCSV(text) {
@@ -77,7 +97,7 @@ function parseCSV(text) {
   if (quoted) throw new Error('CSV contains an unclosed quote.');
   record.push(cell); if (record.some(v => v.trim())) records.push(record);
   const headers = (records.shift() || []).map(v => v.trim().toLowerCase());
-  if (headers.length !== fields.length || new Set(headers).size !== fields.length || fields.some(f => !headers.includes(f))) throw new Error(`CSV must contain these six columns: ${fields.join(', ')}.`);
+  if (new Set(headers).size !== headers.length || headers.some(f => !fields.includes(f)) || legacyFields.filter(f => f !== 'team').some(f => !headers.includes(f))) throw new Error(`CSV needs time, location, product, vs, type; optional columns: day, purpose, team.`);
   return normalize(records.map((values, i) => {
     if (values.length !== headers.length) throw new Error(`CSV row ${i + 2} has the wrong number of columns.`);
     return Object.fromEntries(headers.map((h, j) => [h, values[j]]));
@@ -89,11 +109,11 @@ function download(name, content, type) {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
   status(`${name} downloaded. Your published agenda has not changed. See the publishing instructions below.`);
 }
-$('add').onclick = () => { rows.push({time:'09:00-12:00', location:'', product:'', team:'', vs:'', type:'Breakout'}); save(); render(); $('rows').lastElementChild.querySelector('input').focus(); };
-$('download').onclick = () => { try { validate(); download('rooms.json', JSON.stringify(rows, null, 2) + '\n', 'application/json'); } catch (e) { status(e.message); } };
+$('add').onclick = () => { rows.push({day:rows.at(-1)?.day || 'Day 1', time:'09:00-12:00', location:'', product:'', team:'', vs:'', purpose:'', type:'Breakout'}); save(); render(); $('rows').lastElementChild.querySelector('input').focus(); };
+$('download').onclick = () => { try { validate(); const warnings = AgendaExcel.issues(rows.filter(r => r.day || r.sourceRow)); if (warnings.length && !confirm(warnings.join('\n') + '\n\nDownload with these outstanding items?')) return; download('rooms.json', JSON.stringify(rows.map(({sourceRow, ...row}) => row), null, 2) + '\n', 'application/json'); } catch (e) { status(e.message); } };
 $('csv').onclick = () => {
   try {
-    validate();
+    // CSV can also be used to back up a draft with missing values.
     // Prevent spreadsheet formula execution when opening an exported CSV.
     const quote = value => '"' + (/^[\s]*[=+@-]/.test(value) ? "'" + value : value).replace(/"/g, '""') + '"';
     download('agenda.csv', '\uFEFF' + [fields, ...rows.map(r => fields.map(f => r[f]))].map(r => r.map(quote).join(',')).join('\r\n'), 'text/csv;charset=utf-8');
@@ -103,11 +123,14 @@ $('import').onchange = async event => {
   const file = event.target.files[0]; if (!file) return;
   try {
     if (file.size > 5 * 1024 * 1024) throw new Error('Choose a file smaller than 5 MB.');
-    const text = await file.text();
-    const imported = file.name.toLowerCase().endsWith('.json') ? normalize(JSON.parse(text)) : parseCSV(text);
+    const excel = file.name.toLowerCase().endsWith('.xlsx');
+    let imported, importWarnings = [];
+    if (excel) { const result = await AgendaExcel.importWorkbook(await file.arrayBuffer()); imported = normalize(result.rows); importWarnings = result.warnings; }
+    else { const text = await file.text(); imported = file.name.toLowerCase().endsWith('.json') ? normalize(JSON.parse(text)) : parseCSV(text); }
     if (!imported.length) throw new Error('The imported file has no sessions.');
     if (ready && !confirm('Replace the current draft with the imported sessions?')) return;
     rows = imported; save(); render();
+    if (importWarnings.length) status(`${rows.length} sessions imported. ${importWarnings.join(' ')} Draft is not published.`);
   } catch (e) { status(`Import failed: ${e.message}`); }
   finally { event.target.value = ''; }
 };
@@ -130,6 +153,6 @@ async function init() {
       catch { status('Saved draft could not be read. Loading the published agenda.'); }
     }
     rows = await loadPublished(); render(); status(`${rows.length} published sessions loaded. Changes are saved as a browser draft.`);
-  } catch (e) { status(`${e.message} You can still import a CSV or JSON file.`); }
+  } catch (e) { status(`${e.message} You can still import an Excel, CSV or JSON file.`); }
 }
 init();

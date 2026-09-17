@@ -83,3 +83,6 @@ input, select {
   transform: translateY(10px) !important;
   transition: opacity 0.25s ease-out, transform 0.25s ease-out;
 }
+
+*{box-sizing:border-box}#notice{background:#fff4ce;padding:14px;border-left:4px solid #b67700}.controls label{display:block;font-size:14px;font-weight:bold}.controls input,.controls select{display:block;margin-top:5px}h2{font-size:19px;line-height:1.4}.room-card p{overflow-wrap:anywhere;white-space:pre-line}
+[hidden]{display:none!important}

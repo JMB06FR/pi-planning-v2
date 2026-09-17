@@ -1,23 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PI Planning Breakout Rooms</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <h1>26Q3 PI Breakout Rooms day 2</h1>
-
-  <div class="controls">
-    <input id="searchInput" type="text" placeholder="Search vs, team, room or product..." />
-    <select id="teamFilter">
-      <option value="">All Teams</option>
-    </select>
-  </div>
-
-  <div id="rooms-container" class="rooms"></div>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PI Planning Agenda</title><link rel="stylesheet" href="styles.css"><script src="script.js" defer></script></head>
+<body><h1 id="title">PI Planning Agenda</h1><p id="notice" hidden role="status"></p>
+<div class="controls"><label>Search sessions<input id="searchInput" type="search" placeholder="Search purpose, product, value stream or room…"></label>
+<label id="dayControl" hidden>Day<select id="dayFilter"><option value="">Both days</option></select></label>
+<label>Value stream<select id="vsFilter"><option value="">All value streams</option></select></label>
+<label>Participants / product<select id="teamFilter"><option value="">All participants / products</option></select></label></div>
+<p><a href="editor.html">Edit agenda</a></p><p id="count" role="status"></p><div id="rooms-container" class="rooms"></div></body></html>

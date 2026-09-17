@@ -1,8 +1,16 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PI Planning Agenda</title><link rel="stylesheet" href="styles.css"><script src="script.js" defer></script></head>
-<body><h1 id="title">PI Planning Agenda</h1><p id="notice" hidden role="status"></p>
-<div class="controls"><label>Search sessions<input id="searchInput" type="search" placeholder="Search purpose, product, value stream or room…"></label>
-<label id="dayControl" hidden>Day<select id="dayFilter"><option value="">Both days</option></select></label>
-<label>Value stream<select id="vsFilter"><option value="">All value streams</option></select></label>
-<label>Participants / product<select id="teamFilter"><option value="">All participants / products</option></select></label></div>
-<p><a href="editor.html">Edit agenda</a></p><p id="count" role="status"></p><div id="rooms-container" class="rooms"></div></body></html>
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#132b43"><title>PI Planning Agenda</title><link rel="stylesheet" href="styles.css?v=2"><script src="agenda-filters.js" defer></script><script src="script.js?v=2" defer></script></head>
+<body>
+<a class="skip-link" href="#agenda">Skip to agenda</a>
+<header class="hero"><div class="hero-inner"><div class="topbar"><span class="brand"><span class="brand-mark" aria-hidden="true">PI</span> EMA · DIGITAL PORTFOLIO</span><a class="editor-link" href="editor.html">Edit agenda <span aria-hidden="true">↗</span></a></div><div class="hero-content"><div><p class="eyebrow">CONNECT. PLAN. DELIVER.</p><h1 id="title">PI Planning</h1><p class="intro">Your teams. Your sessions. One shared plan.</p></div><div class="event-meta"><span class="event-label">THE PROGRAMME</span><strong id="total">Loading agenda…</strong><span>Find your next conversation.</span></div></div></div></header>
+<main class="page"><p id="notice" class="notice" hidden role="status"></p>
+<section class="finder" aria-label="Find sessions"><div class="finder-top"><div><h2>Build your agenda</h2><p>Choose your day, then narrow it down.</p></div><div id="dayTabs" class="day-tabs" role="group" aria-label="Day"></div></div>
+<div class="search-row"><label class="search-box"><span class="sr-only">Search sessions</span><svg aria-hidden="true" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="searchInput" type="search" placeholder="Search a product, room or purpose…" autocomplete="off"><kbd aria-hidden="true">/</kbd></label><label class="select-box"><span>SESSION TYPE</span><select id="typeFilter"><option value="">All session types</option></select></label><label class="select-box product-select"><span>PRODUCT / TEAM</span><select id="productFilter"><option value="">All products & teams</option></select></label></div>
+<div class="stream-row"><span class="filter-label">VALUE STREAMS</span><div id="streamFilters" class="stream-filters" role="group" aria-label="Value streams; choose one or more"></div></div>
+<div class="filter-footer"><p id="filterHint">Filters work together. Select several value streams to include any of them.</p><label class="shared-control"><input id="includeShared" type="checkbox" checked> Include shared sessions</label></div>
+<div id="activeFilters" class="active-filters" aria-label="Active filters"></div>
+</section>
+<section id="agenda" aria-labelledby="agendaTitle" tabindex="-1"><div class="results-header"><div><p class="eyebrow teal">YOUR PROGRAMME</p><h2 id="agendaTitle">The agenda</h2><p id="count" role="status" aria-live="polite">Loading sessions…</p></div><button id="clearFilters" class="clear-button" type="button">Clear filters <span aria-hidden="true">↺</span></button></div><div id="rooms-container"></div></section>
+<footer class="page-footer"><span>EMA · PI Planning</span><span>Plan together. Move forward.</span></footer></main>
+</body></html>

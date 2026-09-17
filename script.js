@@ -40,14 +40,16 @@ function renderRooms(rooms) {
     const card = document.createElement("div");
     card.className = "room-card";
 
-    card.innerHTML = `
-      <h2>${room.team}</h2>
-      <p><strong>Time:</strong> ${room.time}</p>
-      <p><strong>Location:</strong> ${room.location}</p>
-      <p><strong>Product:</strong> ${room.product}</p>
-      <p><strong>Value Stream:</strong> ${room.vs}</p>
-      <p><strong>Type:</strong> ${room.type}</p>
-    `;
+    const heading = document.createElement("h2");
+    heading.textContent = room.team;
+    card.appendChild(heading);
+    for (const [label, field] of [["Time", "time"], ["Location", "location"], ["Product", "product"], ["Value Stream", "vs"], ["Type", "type"]]) {
+      const line = document.createElement("p");
+      const title = document.createElement("strong");
+      title.textContent = label + ": ";
+      line.append(title, document.createTextNode(room[field]));
+      card.appendChild(line);
+    }
 
     container.appendChild(card);
     currentCards.push(card);
@@ -85,3 +87,4 @@ document.getElementById("searchInput").addEventListener("input", applyFilters);
 document.getElementById("teamFilter").addEventListener("change", applyFilters);
 
 loadRooms();
+
